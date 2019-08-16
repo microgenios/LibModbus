@@ -1,34 +1,24 @@
-import pathlib
-from setuptools import setup
-
-# The directory containing this file
-HERE = pathlib.Path(__file__).parent
-
-# The text of the README file
-README = (HERE / "README.md").read_text()
-
-# This call to setup() does all the work
+from distutils.core import setup
 setup(
-    name="realpython-reader",
-    version="1.0.0",
-    description="Read the latest Real Python tutorials",
-    long_description=README,
-    long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
-    author="Real Python",
-    author_email="office@realpython.com",
-    license="MIT",
-    classifiers=[
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-    ],
-    packages=["reader"],
-    include_package_data=True,
-    install_requires=["feedparser", "html2text"],
-    entry_points={
-        "console_scripts": [
-            "realpython=reader.__main__:main",
-        ]
-    },
+  name = 'LibModbus',       
+  packages = ['LibModbus'],   
+  version = '0.1',      
+  license='MIT',       
+  description = 'LibModbus do Conversor Modbus para MQTT M1',   
+  author = 'Fernando Simplicio',                  
+  author_email = 'fernando@microgenios.com.br',     
+  url = 'https://github.com/microgenios/LibModbus',  
+  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    
+  keywords = ['Modbus', 'Microgenios', 'Conversor M1'],  
+  install_requires=[           
+          'validators',
+          'beautifulsoup4',
+      ],
+  classifiers=[
+    'Development Status :: 5 - Production/Stable',      
+    'Intended Audience :: Developers',      
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License',  
+    'Programming Language :: Python :: 3.7',
+  ],
 )
